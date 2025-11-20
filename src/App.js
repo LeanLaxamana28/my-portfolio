@@ -13,6 +13,7 @@ export default function App() {
     AOS.init({ duration: 1000 });
   }, []);
 
+  // Certificates data
   const certificates = [
     { title: "React Developer", issuer: "Coursera", img: "/certificates/react.png" },
     { title: "Frontend Mastery", issuer: "Udemy", img: "/certificates/frontend.png" },
@@ -20,7 +21,27 @@ export default function App() {
     { title: "Network Security", issuer: "NetSec", img: "/certificates/NetworkSupportandSecurityUpdate2025.png" },
   ];
 
-  const projects = ["Project 1", "Project 2", "Project 3"];
+  // Projects data
+  const projects = [
+    {
+      title: "React CRUD App",
+      desc: "A full React.js CRUD application deployed on Vercel.",
+      img: "/projects/react-crud.png", // Add screenshot in public/projects/react-crud.png
+      link: "https://react-crud-demo-xi.vercel.app"
+    },
+    {
+      title: "Project 2",
+      desc: "Description for project 2",
+      img: "/projects/project2.png",
+      link: "#"
+    },
+    {
+      title: "Project 3",
+      desc: "Description for project 3",
+      img: "/projects/project3.png",
+      link: "#"
+    }
+  ];
 
   return (
     <div style={{ backgroundColor: "#1A0E2A", color: "#FFFFFF", minHeight: "100vh" }}>
@@ -105,15 +126,18 @@ export default function App() {
           <div className="row g-4">
             {projects.map((proj, i) => (
               <div className="col-md-4" key={i}>
-                <div className="card h-100 shadow" data-aos="fade-up" data-aos-delay={i * 150}
-                  style={{ border: "1px solid #D8D5DE", transition: "0.3s" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-10px)")}
-                  onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}>
-                  <div className="card-body">
-                    <h5 className="fw-bold">{proj}</h5>
-                    <p className="text-muted">A short description about {proj}.</p>
+                <a href={proj.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <div className="card h-100 shadow" data-aos="fade-up" data-aos-delay={i * 150}
+                    style={{ border: "1px solid #D8D5DE", transition: "0.3s", cursor: "pointer" }}
+                    onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-10px)")}
+                    onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}>
+                    <img src={proj.img} className="card-img-top" alt={proj.title} style={{ objectFit: "cover", height: "200px" }} />
+                    <div className="card-body text-center">
+                      <h5 className="fw-bold">{proj.title}</h5>
+                      <p className="text-muted">{proj.desc}</p>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             ))}
           </div>
@@ -143,7 +167,7 @@ export default function App() {
             ))}
           </div>
 
-          {/* MODAL */}
+          {/* CERTIFICATE MODAL */}
           {selectedCert && (
             <div className="modal show d-block fade-modal" tabIndex="-1" style={{ backgroundColor: "rgba(0,0,0,0.8)" }}>
               <div className="modal-dialog modal-dialog-centered modal-lg">
