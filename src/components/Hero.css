@@ -1,0 +1,27 @@
+.hero-section {
+  /* Gradient background: red to dark red/black for tech vibe */
+  background: linear-gradient(135deg, #fa1028 0%, #9b0808 10%, #3e0606 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/circuit.png'); /* free circuit pattern */
+  background-repeat: repeat;
+  background-size: cover; /* ensures it fills the area */
+  opacity: 0.1; /* subtle overlay */
+  pointer-events: none;
+  z-index: 0; /* behind all content */
+}
+
+/* Ensure content is above the overlay */
+.hero-section > .container {
+  position: relative;
+  z-index: 1;
+}

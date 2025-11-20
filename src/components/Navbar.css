@@ -1,0 +1,14 @@
+/* Navbar.css */
+
+/* Active link highlight */
+.active-link {
+  font-weight: 700;
+  color: #dc3545 !important; /* dark red highlight */
+  border-bottom: 2px solid #dc3545;
+}
+
+/* Smooth hover effect */
+.nav-link:hover {
+  color: #ebe6e6 !important;
+  transition: color 0.3s;
+}
