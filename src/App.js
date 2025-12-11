@@ -15,33 +15,43 @@ export default function App() {
 
   // Certificates data
   const certificates = [
-    { title: "React Developer", issuer: "Coursera", img: "/certificates/react.png" },
-    { title: "Frontend Mastery", issuer: "Udemy", img: "/certificates/frontend.png" },
-    { title: "UI/UX Design", issuer: "Figma Academy", img: "/certificates/uiux.png" },
-    { title: "Network Security", issuer: "NetSec", img: "/certificates/NetworkSupportandSecurityUpdate2025.png" },
+    
+    { title: "JavaScript Essentials 1", issuer: "Cisco", img: "/certificates/JavaScript Essentials 1.png",link: "https://www.credly.com/badges/36d0bbd1-6bce-40c9-a054-1b6f8092495a/public_url" },
+   
+   
+   { title: "Network Security", issuer: "Cisco", img: "/certificates/NetworkSupportandSecurityUpdate2025.png",link: "https://www.credly.com/badges/075321f1-c29f-49b0-ba9b-69a8651cf7a2/public_url" },
+   
   ];
 
   // Projects data
-  const projects = [
-    {
-      title: "React CRUD App",
-      desc: "A full React.js CRUD application deployed on Vercel.",
-      img: "/projects/react-crud.png", // Add screenshot in public/projects/react-crud.png
-      link: "https://react-crud-demo-xi.vercel.app"
-    },
-    {
-      title: "Project 2",
-      desc: "Description for project 2",
-      img: "/projects/project2.png",
-      link: "#"
-    },
-    {
-      title: "Project 3",
-      desc: "Description for project 3",
-      img: "/projects/project3.png",
-      link: "#"
-    }
-  ];
+// Projects data
+const projects = [
+  {
+    title: "React CRUD App",
+    desc: "A full-featured React.js CRUD application allowing users to create, read, update, and delete posts. Deployed on Vercel for live demonstration.",
+    img: "/projects/React_Blog.png",
+    link: "https://react-crud-demo-xi.vercel.app"
+  },
+  {
+    title: "Bakery Ordering System",
+    desc: "A bakery ordering web app where users can browse products, place orders, and manage their shopping cart. Built with React and deployed on Vercel.",
+    img: "/projects/Bakery_Ordering System.png",
+    link: "https://sweet-treats-bakery-app.vercel.app/"
+  },
+  {
+    title: "Class Attendance App (Mobile)",
+    desc: "A mobile application for teachers to track student attendance, powered by React Native and Expo. Allows marking, viewing, and  attendance records.",
+    img: "/projects/Attendance_Mobile.png",
+    link: "https://snack.expo.dev/@leantot/class-attendance-app-mobile"
+  },
+  {
+    title: "Class Attendance App (Web)",
+    desc: "A web version of the attendance management system, offering a responsive dashboard to manage and track student attendance efficiently.",
+    img: "/projects/Attendance_Web.png",
+    link: "https://attendance-app-two-xi.vercel.app/"
+  }
+];
+
 
   return (
     <div style={{ backgroundColor: "#1A0E2A", color: "#FFFFFF", minHeight: "100vh" }}>
